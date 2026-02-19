@@ -40,7 +40,7 @@ notification_manager = NotificationManager()
 
 def send_email(subject, body, attachments=None):
     """Send email with optional attachments"""
-    try:
+    # try:
         msg = MIMEMultipart()
         msg['From'] = EMAIL_CONFIG['sender_email']
         msg['To'] = EMAIL_CONFIG['recipient_email']
@@ -67,11 +67,11 @@ def send_email(subject, body, attachments=None):
             
         logging.info(f"Email sent successfully: {subject}")
         return True
-    except Exception as e:
-        logging.error(f"Failed to send email: {str(e)}")
-        logging.error(f"Email configuration used: server={EMAIL_CONFIG['smtp_server']}, port={EMAIL_CONFIG['smtp_port']}")
-        # 不要立即抛出异常，让程序继续运行
-        return False
+    # except Exception as e:
+    #     logging.error(f"Failed to send email: {str(e)}")
+    #     logging.error(f"Email configuration used: server={EMAIL_CONFIG['smtp_server']}, port={EMAIL_CONFIG['smtp_port']}")
+    #     # 不要立即抛出异常，让程序继续运行
+    #     return False
 
 def create_daily_directory():
     """Create a directory for today's data"""
