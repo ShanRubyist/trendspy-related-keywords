@@ -23,10 +23,7 @@ EMAIL_CONFIG = {
 KEYWORDS = [
    
     "Image",
-    "Video",
-    "Music",
-    "Voice",
-    "Text",
+    "Generator",
     # Add more keywords as needed
 ]
 
@@ -35,7 +32,7 @@ KEYWORDS = [
 TRENDS_CONFIG = {
     'timeframe': 'last-3-d',  # 可选值: now 1-d, now 7-d, now 30-d, now 90-d, today 12-m, 
                             # last-2-d, last-3-d 或者 "2024-01-01 2024-01-31"
-    'geo': '',  # 地区代码，例如: 'US' 表示美国, 'CN' 表示中国, '' 表示全球
+    'geo': 'US',  # 地区代码，例如: 'US' 表示美国, 'CN' 表示中国, '' 表示全球
 }
 
 # Rate Limiting Configuration
@@ -49,14 +46,14 @@ RATE_LIMIT_CONFIG = {
 
 # Schedule Configuration
 SCHEDULE_CONFIG = {
-    'hour': 23,                    # 计划执行的小时（0-23）
-    'minute': 5,                 # 计划执行的分钟（0-59）
+    'hour': 8,                    # 计划执行的小时（0-23）
+    'minute': 0,                 # 计划执行的分钟（0-59）
     'random_delay_minutes': 15   # 随机延迟的最大分钟数（可选）
 }
 
 # Monitoring Configuration
 MONITOR_CONFIG = {
-    'rising_threshold': 500,  # 高增长趋势阈值
+    'rising_threshold': 100,  # 高增长趋势阈值
 }
 
 # Logging Configuration
